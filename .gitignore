@@ -1,0 +1,5 @@
+haros_plugin_pyflwor/*.pyc
+haros_plugin_pyflwor/**/*.pyc
+build
+dist
+haros_plugin_pyflwor.egg-info
