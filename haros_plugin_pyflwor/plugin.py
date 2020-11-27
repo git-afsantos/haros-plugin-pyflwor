@@ -25,6 +25,7 @@
 # Imports
 ###############################################################################
 
+from builtins import object
 import logging
 import os
 
@@ -68,7 +69,7 @@ class QueryEngine(object):
         "int": int,
         "isinstance": isinstance,
         "len": len,
-        "long": long,
+        "long": int,
         "max": max,
         "min": min,
         "pow": pow,
