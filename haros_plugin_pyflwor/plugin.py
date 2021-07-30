@@ -26,6 +26,7 @@
 ###############################################################################
 
 from builtins import object
+import errno
 import logging
 import os
 
@@ -110,7 +111,11 @@ class QueryEngine(object):
 def _setup():
     # create temp dir for pyflwor lexer files
     pyflwor_dir = os.path.join(os.getcwd(), "pyflwor")
-    os.mkdir(pyflwor_dir)
+    try:
+        os.mkdir(pyflwor_dir)
+    except OSError as exc:
+        if exc.errno != errno.EEXIST:
+            raise
     pyflwor = make_parser(pyflwor_dir)
     query_engine = QueryEngine(pyflwor)
     return query_engine
