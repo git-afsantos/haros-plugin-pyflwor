@@ -23,19 +23,17 @@
 import os
 from setuptools import setup, find_packages
 
-extra_files = ["haros_plugin_pyflwor/plugin.yaml"]
-
 setup(
     name = "haros_plugin_pyflwor",
-    version = "0.2.1",
+    version = "0.2.2",
     author = "André Santos",
-    author_email = "andre.f.santos@inesctec.pt",
+    author_email = "haros.framework@gmail.com",
     description = "HAROS plugin to query Configurations with Pyflwor.",
     license = "MIT",
     keywords = "ros query architecture model computation-graph",
     url = "https://github.com/git-afsantos/haros-plugin-pyflwor",
     packages = find_packages(),
-    package_data = {"haros_plugin_pyflwor": extra_files},
+    package_data = {"haros_plugin_pyflwor": ["plugin.yaml"]},
     install_requires = ["pyflwor_ext>=1.2"],
-    zip_safe = True
+    zip_safe = False
 )
