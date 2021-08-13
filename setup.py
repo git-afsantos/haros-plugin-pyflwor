@@ -25,7 +25,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "haros_plugin_pyflwor",
-    version = "0.2.2",
+    version = "0.2.3",
     author = "André Santos",
     author_email = "haros.framework@gmail.com",
     description = "HAROS plugin to query Configurations with Pyflwor.",
