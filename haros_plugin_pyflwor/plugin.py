@@ -57,6 +57,9 @@ def configuration_analysis(iface, config):
 # Query Engine
 ################################################################################
 
+def cmp_replacement(a, b):
+    return (a > b) - (a < b)
+
 class QueryEngine(object):
     QUERY_CONTEXT = {
         "True": True,
@@ -64,7 +67,7 @@ class QueryEngine(object):
         "None": None,
         "abs": abs,
         "bool": bool,
-        "cmp": cmp,
+        "cmp": cmp_replacement,
         "divmod": divmod,
         "float": float,
         "int": int,
